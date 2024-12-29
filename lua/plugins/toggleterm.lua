@@ -12,6 +12,9 @@ return {
         opts.desc = "ToggleTerm toggle vertical terminal"
         vim.keymap.set("n", "<leader>tm", ":ToggleTerm size=70 direction=vertical<CR>", opts)
 
+        opts.desc = "ToggleTerm toggle horizontal terminal"
+        vim.keymap.set("n", "<leader>htm", ":ToggleTerm size=20 direction=horizontal<CR>", opts)
+
         opts.desc = "ToggleTerm select terminal"
         vim.keymap.set("n", "<leader>ts", ":TermSelect<CR>", opts) -- select terminal
 
