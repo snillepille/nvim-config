@@ -8,8 +8,9 @@ return {
 
         local opts = { noremap = true, silent = true }
 
-        opts.desc = "ToggleTerm toggle terminal"
-        vim.keymap.set("n", "<leader>tm", ":ToggleTerm size=12<CR>", opts) -- toggle terminal
+
+        opts.desc = "ToggleTerm toggle vertical terminal"
+        vim.keymap.set("n", "<leader>tm", ":ToggleTerm size=70 direction=vertical<CR>", opts)
 
         opts.desc = "ToggleTerm select terminal"
         vim.keymap.set("n", "<leader>ts", ":TermSelect<CR>", opts) -- select terminal
