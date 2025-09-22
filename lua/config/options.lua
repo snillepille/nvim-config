@@ -6,10 +6,10 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- Set general indentation rules
-vim.opt.tabstop = 4         -- A tab is 2 spaces
+vim.opt.tabstop = 4         -- A tab is 4 spaces
 vim.opt.shiftwidth = 4      -- Indentation width
 vim.opt.expandtab = true    -- Use spaces instead of tabs
-vim.opt.softtabstop = 4     -- Insert 2 spaces for a Tab
+vim.opt.softtabstop = 4     -- Insert 4 spaces for a Tab
 
 -- Set relative line numbers
 vim.opt.relativenumber = true
@@ -18,12 +18,15 @@ vim.opt.relativenumber = true
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "lua",
   callback = function()
-    vim.opt.tabstop = 2
-    vim.opt.shiftwidth = 2
-    vim.opt.expandtab = true
-    vim.opt.softtabstop = 2
+    vim.bo.tabstop = 2
+    vim.bo.shiftwidth = 2
+    vim.bo.expandtab = true
+    vim.bo.softtabstop = 2
   end,
 })
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
+vim.opt.wrap = false -- setting nowrap
+vim.opt.sidescrolloff = 8 -- how many columns the cursor keeps from the side of the screen when sidescrolling

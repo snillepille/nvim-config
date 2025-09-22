@@ -10,3 +10,9 @@ vim.keymap.set({ 't', 'n', 'v' }, "§h", "<cmd>wincmd h<CR>", { desc = "Moves cu
 vim.keymap.set({ 't', 'n', 'v' }, "§j", "<cmd>wincmd j<CR>", { desc = "Moves cursor to window below current" })
 vim.keymap.set({ 't', 'n', 'v' }, "§k", "<cmd>wincmd k<CR>", { desc = "Moves cursor to window above current" })
 vim.keymap.set({ 't', 'n', 'v' }, "§l", "<cmd>wincmd l<CR>", { desc = "Moves cursor to window right of current" })
+
+-- tmux keymaps
+vim.keymap.set({ 'n' }, "<C>h", "<cmd> TmuxNavigateLeft<CR>", { desc = "tmux window left" })
+vim.keymap.set({ 'n' }, "<C>l", "<cmd> TmuxNavigateRight<CR>", { desc = "tmux window right" })
+vim.keymap.set({ 'n' }, "<C>j", "<cmd> TmuxNavigateDown<CR>", { desc = "tmux window down" })
+vim.keymap.set({ 'n' }, "<C>k", "<cmd> TmuxNavigateUp<CR>", { desc = "tmux window up" })
